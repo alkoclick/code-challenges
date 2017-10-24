@@ -1,11 +1,9 @@
 package unit;
 
-import static org.junit.Assert.assertEquals;
-
+import challenges.BinaryGap;
 import org.junit.Test;
 
-import challenges.BinaryGap;
-import interviews.FirstNonRepeatedCharacter;
+import static org.junit.Assert.assertEquals;
 
 public class BinaryGapTest {
 
@@ -13,21 +11,16 @@ public class BinaryGapTest {
 	public void normalUseCase() {
 		assertEquals(BinaryGap.of(9), 2);
 		assertEquals(BinaryGap.of(19), 2);
-		assertEquals(BinaryGap.of(Integer.MIN_VALUE), 31);
-		assertEquals(BinaryGap.of(Integer.MAX_VALUE), 0);
+		assertEquals(BinaryGap.of(529), 4);
+		assertEquals(BinaryGap.of(20), 1);
+		assertEquals(BinaryGap.of(15), 0);
 	}
 
 	@Test
 	public void edgeCases() {
-		assertEquals(FirstNonRepeatedCharacter.of("abcdabcd"), Character.MIN_VALUE);
-		assertEquals(FirstNonRepeatedCharacter.of("Ama"), 'A');
-
-		// expectedException.expect(NullPointerException.class);
-		assertEquals(FirstNonRepeatedCharacter.of(null), Character.MIN_VALUE);
-
-		assertEquals(FirstNonRepeatedCharacter.of("a a"), ' ');
-		assertEquals(FirstNonRepeatedCharacter.of("aΣa"), 'Σ');
-		assertEquals(FirstNonRepeatedCharacter.of(""), Character.MIN_VALUE);
+		assertEquals(BinaryGap.of(Integer.MIN_VALUE), 0);
+		assertEquals(BinaryGap.of(Integer.MAX_VALUE), 0);
+		assertEquals(BinaryGap.of(0), 0);
 	}
 
 }

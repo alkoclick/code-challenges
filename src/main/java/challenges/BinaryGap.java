@@ -9,9 +9,7 @@ import java.util.regex.Pattern;
 public class BinaryGap {
 
 	public static int of(int input) {
-		System.out.println(Integer.toBinaryString(input));
-		Pattern p = Pattern.compile("10+1");
-		Matcher m = p.matcher(Integer.toBinaryString(input));
-		return m.results().mapToInt(mRes -> mRes.group().length()).max().orElse(0);
+		Matcher m = Pattern.compile("10+1").matcher(Integer.toBinaryString(input));
+		return m.results().mapToInt(mRes -> mRes.group().length()-2).max().orElse(0);
 	}
 }
