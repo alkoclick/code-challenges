@@ -1,13 +1,12 @@
 package unit;
 
-import static org.junit.Assert.assertEquals;
-
+import interviews.FirstNonRepeatedCharacter;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import interviews.FirstNonRepeatedCharacter;
+import static org.junit.Assert.assertEquals;
 
 public class FirstNonRepeatedCharacterTest {
 	private static String longString;
