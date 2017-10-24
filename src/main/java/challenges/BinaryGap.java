@@ -12,12 +12,6 @@ public class BinaryGap {
 		System.out.println(Integer.toBinaryString(input));
 		Pattern p = Pattern.compile("10+1");
 		Matcher m = p.matcher(Integer.toBinaryString(input));
-		int max = 0;
-		while (m.find()) {
-			int l = m.group().length();
-			if (l > max)
-				max = l;
-		}
-		return max;
+		return m.results().mapToInt(mRes -> mRes.group().length()).max().orElse(0);
 	}
 }
