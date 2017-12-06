@@ -1,12 +1,13 @@
 package unit;
 
-import interviews.FirstNonRepeatedCharacter;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import static org.junit.Assert.assertEquals;
+import interviews.FirstNonRepeatedCharacter;
 
 public class FirstNonRepeatedCharacterTest {
 	private static String longString;
@@ -46,7 +47,6 @@ public class FirstNonRepeatedCharacterTest {
 		assertEquals(FirstNonRepeatedCharacter.of(null), Character.MIN_VALUE);
 
 		assertEquals(FirstNonRepeatedCharacter.of("a a"), ' ');
-		assertEquals(FirstNonRepeatedCharacter.of("aΣa"), 'Σ');
 		assertEquals(FirstNonRepeatedCharacter.of(""), Character.MIN_VALUE);
 	}
 

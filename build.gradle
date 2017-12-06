@@ -3,11 +3,11 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 
 compileJava {
-    options.fork = true
-    options.forkOptions.jvmArgs << '--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED'
+    //options.fork = true
+    //options.forkOptions.jvmArgs << '--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED'
 }
 
-// In this section you declare where to find the dependencies of your project
+
 repositories {
     mavenCentral()
 }

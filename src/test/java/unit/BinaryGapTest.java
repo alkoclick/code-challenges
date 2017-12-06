@@ -1,9 +1,10 @@
 package unit;
 
-import challenges.BinaryGap;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import challenges.BinaryGap;
 
 public class BinaryGapTest {
 
